@@ -1,7 +1,7 @@
 from selenium.webdriver.common.by import By
 
 
-class MainPage:
+class BasePage:
     """
     Локаторы главной страницы сайта и сквозных элементов.
     """

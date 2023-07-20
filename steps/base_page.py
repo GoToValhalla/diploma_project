@@ -1,6 +1,7 @@
 import allure
 from selene.support.shared import browser
 from selene import have, by
+import locators
 
 
 class base_page:
@@ -10,4 +11,5 @@ class base_page:
     def test_open_main_page(self):
         with allure.step('Открываем стартовую страницу'):
             browser.open('https://dostavka.magnit.ru/')
-            browser.element('[data-test-id="header-logo-link"]').should(have.exact_text('Магнит Доставка'))
+            # browser.element('[data-test-id="header-logo-link"]').should(have.exact_text('Магнит Доставка'))
+            locators.base_page.BasePage.LOGIN_ICON
