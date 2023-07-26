@@ -1,7 +1,9 @@
+import dataclasses
+
 from selenium.webdriver.common.by import By
 
 
-
+@dataclasses
 class Base_page:
     # ------------------------------------- Поп-ап "Укажите адрес доставки"------------------------------------------ #
     DELIVERY_ADDRESS_POPUP = (By.XPATH, './/div[@data-test-id="change-delivery-address-popup"]')
