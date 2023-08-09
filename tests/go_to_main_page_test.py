@@ -1,10 +1,9 @@
 from selene.support.shared import browser
 from selene import have, be
+import allure
 
 def test_open_main_page():
-    browser.open("https://dostavka.magnit.ru/")
+    with allure.step('Открываем стартовую страницу'):
+        browser.open('https://dostavka.magnit.ru/')
+        browser.element('[data-test-id="header-logo-link"]').should(have.exact_text('Магнит Доставка'))
 
-
-
-def test_qqq():
-    print(test_qqq)
