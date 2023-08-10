@@ -1,19 +1,18 @@
 import allure
-import by
 from selene.support.shared import browser
+from model.pages import *
+from model.pages import base_page
 
 
-def test_catalog_search():
+def test_catalog_search(Base_page=None):
 
     with allure.step('Открываем сайт доставки'):
-        browser.open('https://dostavka.magnit.ru/')
+        base_page = Base_page
+        base_page.open()
 
     with allure.step('Кликаем на кнопку каталог'):
         browser.element('[data-test-id="catalog-btn"]').click()
 
-
-    with allure.step(''):
-        $(by.LINK_TEXT('Цена — что надо')).click()
 
 
 
