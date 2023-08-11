@@ -8,11 +8,11 @@ def test_go_to_the_cart(Base_page=None):
     # catalog_page = Catalog_page
     with allure.step('Переходим в корзину'):
         base_page.open()
-        browser.element('[data-test-id="small-cart"]').click()
-        browser.element('[data-test-id="header-logo-link"]').should()
+        base_page.cart().click()
+        base_page.logo().should()
 
     with allure.step('Возвращение на главную страницу'):
-        browser.element('[data-test-id="to-main-btn"]').click()
-        browser.element('[data-test-id="header-logo-link"]').should()
+        base_page.go_to_main_page_button().click()
+        base_page.logo().should()
 
 #TODO ошибка в тесте.
