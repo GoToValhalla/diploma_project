@@ -7,8 +7,8 @@ class Base_page:
     def open(self):
         browser.open('https://dostavka.magnit.ru/')
         return self
-    def cart(self):
-        browser.element('[data-test-id="small-cart"]')
+    def go_to_cart(self):
+        browser.element('[data-test-id="small-cart"]').click()
         return self
     def add_address_delivery(self):
         browser.element('[class="select-address__address"]').click()
