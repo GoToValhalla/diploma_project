@@ -1,9 +1,9 @@
 import allure
-from model.pages.base_page import Base_page
+from model.pages.base_page import BasePage
 
 
 def test_go_to_the_cart():
-    base_page = Base_page
+    base_page = BasePage
 
     with allure.step('Переходим в корзину'):
         base_page.open()
