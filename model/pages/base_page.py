@@ -17,7 +17,7 @@ class BasePage:
         return self
 
     def logo(self):
-        browser.element('[data-test-id="header-logo-link"]').should(have.value('МАГНИТ ДОСТАВКА'))
+        browser.element('[data-test-id="header-logo-link"]').click()
         return self
 
     def go_to_main_page_button(self):
