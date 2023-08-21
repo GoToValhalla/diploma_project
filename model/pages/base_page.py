@@ -1,4 +1,4 @@
-import dataclasses
+from selene import have
 from selene.support.shared import browser
 
 
@@ -17,9 +17,9 @@ class BasePage:
         return self
 
     def logo(self):
-        browser.element('[data-test-id="header-logo-link"]')
+        browser.element('[data-test-id="header-logo-link"]').should(have.value('МАГНИТ ДОСТАВКА'))
         return self
 
     def go_to_main_page_button(self):
-        browser.element('[data-test-id="to-main-btn"]')
+        browser.element('[data-test-id="to-main-btn"]').click()
         return self
