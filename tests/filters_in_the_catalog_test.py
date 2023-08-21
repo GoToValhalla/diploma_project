@@ -23,8 +23,4 @@ def test_catalog_search():
     with allure.step('Возвращаемся на главную'):
         base_page.logo()
 
-
-pass
-
-
-# TODO дописать проверки
+#TODO дописать проверки
