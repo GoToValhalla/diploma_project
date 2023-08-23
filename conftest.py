@@ -1,3 +1,6 @@
+import os
+
+import fixture
 from dotenv import load_dotenv
 from selenium import webdriver
 from selene import browser
