@@ -1,9 +1,8 @@
 import time
 
-from selene.support.shared import browser
 import allure
-from model.pages.base_page import BasePage
-from model.pages.catalog_page import CatalogPage
+from pages.base_page import BasePage
+from pages.catalog_page import CatalogPage
 from selene.support.shared.jquery_style import s
 
 

@@ -1,5 +1,5 @@
 import allure
-from model.pages.base_page import BasePage
+from pages.base_page import BasePage
 
 
 def test_add_address_delivery():
