@@ -1,5 +1,6 @@
 import os
 
+from pytest import *
 import fixture
 from dotenv import load_dotenv
 from selenium import webdriver

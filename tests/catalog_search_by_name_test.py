@@ -4,6 +4,7 @@ from selene.support.shared import browser
 import allure
 from model.pages.base_page import BasePage
 from model.pages.catalog_page import CatalogPage
+from selene.support.shared.jquery_style import s
 
 
 def test_catalog_search():
@@ -14,7 +15,7 @@ def test_catalog_search():
         base_page.open()
     time.sleep(5)
     with allure.step('Кликаем на кнопку каталог'):
-        browser.element('[data-test-id="input-search"]').send_keys('Молоко').press_enter()
+        s('[data-test-id="input-search"]').send_keys('Молоко').press_enter()
 
 
 # TODO дописать проверки
