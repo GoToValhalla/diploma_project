@@ -1,15 +1,8 @@
 from random import choice
-
 from allure import title
 
-from pages.main_page import (assert_product_list_sorted_by_price,
-                             assert_selected_category_is_open,
-                             assert_sort_ascend_price_button_is_active,
-                             assert_sort_descend_price_button_is_active,
-                             click_catalog_menu_button,
-                             click_on_category_in_left_part_of_screen,
-                             click_sort_by_price_button,
-                             get_categories, open_main_page)
+from model.step.catalog_page import *
+from model.step.main_page import *
 
 
 @title('Сортировка товара по цене')
