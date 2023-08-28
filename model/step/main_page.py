@@ -125,3 +125,17 @@ def assert_equally_category_name(expected_name: str):
     category_name = driver.find_element(*HEADER_CATALOG_LINK).text
     assert (category_name == expected_name), \
         f'Название категории каталога ошибочно, ожидается: {expected_name}, фактически: {category_name}'
+
+@step('Клик по форме добавления адреса доставки')
+def click_delivery_address():
+    """
+    Клик по форме ввода адреса доставки
+    """
+    find_element_clickable(*SELECT_ADDRESS_DELIVEERY).click()
+
+@step('Ввод адреса доставки')
+def input_delivery_address():
+    """
+    Вводим адреса доставки
+    """
+    s(*INPUT_ADDRESS_DELIVERY).send_keys("нагатинская 12").press_enter()
