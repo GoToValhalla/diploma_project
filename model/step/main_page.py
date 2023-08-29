@@ -1,7 +1,8 @@
-from allure import step
+from allure import *
 
 from model.pages.main_page import *
 from model.step.base import *
+from selene import browser, by, be
 
 
 # ---------------------------------------------------- main_page ---------------------------------------------------- #
@@ -126,12 +127,14 @@ def assert_equally_category_name(expected_name: str):
     assert (category_name == expected_name), \
         f'Название категории каталога ошибочно, ожидается: {expected_name}, фактически: {category_name}'
 
-@step('Клик по форме добавления адреса доставки')
-def click_delivery_address():
+
+@step('Кликнуть по плашке адреса в хедере')
+def click_select_address_inner():
     """
-    Клик по форме ввода адреса доставки
+    Клик по плашке адреса в хедере
     """
-    find_element_clickable(*SELECT_ADDRESS_DELIVEERY).click()
+    find_element_clickable(*SELECT_ADDRESS_INNER).click()
+
 
 @step('Ввод адреса доставки')
 def input_delivery_address():
@@ -139,3 +142,8 @@ def input_delivery_address():
     Вводим адреса доставки
     """
     s(*INPUT_ADDRESS_DELIVERY).send_keys("нагатинская 12").press_enter()
+
+
+@step('Проверяем, что адрес ввелся и ссохранилсся корректно')
+def assert_input_address_visible():
+    browser.element(by.partial_text("нагатинская 12")).should(be.visible)

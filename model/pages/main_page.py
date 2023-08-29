@@ -48,7 +48,7 @@ CATALOG_PAGE = s('.js-paginator-scrolling-catalog-layout')
 HEADER_LOGO = s('.//*[@data-test-id="header-logo-link"]')
 # --------------------------------- Контент главной страницы сайта ---------------------------------------------- #
 HOME_PAGE = s('.page-home')
-# --------------------------------------- Адрес доставки -------------------------------------------------------- #
-SELECT_ADDRESS_DELIVEERY = s('[class="select-address__address"]')
+# --------------------------------- Плашка адреса в хедере ------------------------------------------------------ #
+SELECT_ADDRESS_INNER = s('.select-address__inner')
 
 INPUT_ADDRESS_DELIVERY = s('[data-test-id="delivery-address-input"]')
